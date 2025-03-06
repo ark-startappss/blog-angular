@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [RouterModule, MatButtonModule, MatCardModule],
+  imports: [RouterModule, MatButtonModule, MatCardModule, MatToolbarModule],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css',
 })
 export class DashboardComponent {
-  blogs = [
+  blogs = signal([
     {
       id: 1,
       title: 'Blog 1',
@@ -53,5 +54,5 @@ export class DashboardComponent {
       content:
         'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo nulla ratione dolorem eos facilis id fugiat ipsam facere nam veritatis.',
     },
-  ];
+  ]);
 }

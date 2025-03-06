@@ -1,19 +1,14 @@
-#blogs-dashboard {
-  padding: 2rem;
-}
 #blogs-dashboard > h1 {
   font-weight: 500;
 }
 
-#blogs-dashboard > nav {
-  display: flex;
-  align-items: center;
+#blogs-dashboard mat-toolbar {
   justify-content: space-between;
   gap: 1rem;
 }
 
 #blogs-dashboard > ul {
-  margin-top: 2rem;
+  padding: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

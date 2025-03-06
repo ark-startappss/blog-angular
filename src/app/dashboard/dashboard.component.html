@@ -1,10 +1,12 @@
 <main id="blogs-dashboard">
   <nav>
-    <h1>Dashboard</h1>
-    <a mat-flat-button [routerLink]="['/blogs/create']">Add Blog</a>
+    <mat-toolbar>
+      <h1>Dashboard</h1>
+      <a mat-flat-button [routerLink]="['/blogs/create']">Add Blog</a>
+    </mat-toolbar>
   </nav>
   <ul>
-    @for (blog of blogs; track $index) {
+    @for (blog of blogs(); track $index) {
     <li>
       <a [routerLink]="['/blogs/' + blog.id]">
         <mat-card class="example-card" appearance="outlined">
