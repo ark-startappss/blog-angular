@@ -1,0 +1,9 @@
+#create-blog {
+  padding: 2rem;
+}
+#create-blog > form {
+  max-width: 500px;
+  margin-top: 1rem;
+  margin-inline: auto;
+  display: grid;
+}
