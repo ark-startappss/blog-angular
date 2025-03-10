@@ -6,4 +6,5 @@
   margin-top: 1rem;
   margin-inline: auto;
   display: grid;
+  row-gap: 1rem;
 }

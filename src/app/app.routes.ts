@@ -1,23 +1,30 @@
 import { Routes } from '@angular/router';
 
-// local imports
-import { LoginComponent } from './login/login.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { BlogComponent } from './blog/blog.component';
-import { CreateComponent } from './create/create.component';
-
 export const routes: Routes = [
-  { path: 'login', component: LoginComponent },
+  {
+    path: 'login',
+    loadComponent: () => {
+      return import('./login/login.component').then((m) => m.LoginComponent);
+    },
+  },
   {
     path: 'blogs',
-    component: DashboardComponent,
+    loadComponent: () => {
+      return import('./dashboard/dashboard.component').then(
+        (m) => m.DashboardComponent
+      );
+    },
   },
   {
     path: 'blogs/create',
-    component: CreateComponent,
+    loadComponent: () => {
+      return import('./create/create.component').then((m) => m.CreateComponent);
+    },
   },
   {
     path: 'blogs/:id',
-    component: BlogComponent,
+    loadComponent: () => {
+      return import('./blog/blog.component').then((m) => m.BlogComponent);
+    },
   },
 ];

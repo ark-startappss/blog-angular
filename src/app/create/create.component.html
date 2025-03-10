@@ -2,15 +2,23 @@
   <nav>
     <a mat-button [routerLink]="['/blogs']">{{ "< Back" }}</a>
   </nav>
-  <form>
+  <form [formGroup]="blogForm" (ngSubmit)="onSubmit()">
     <mat-form-field appearance="outline">
       <mat-label>Title</mat-label>
-      <input matInput />
+      <input matInput formControlName="title" />
+      @if (blogForm.controls.title.invalid) {
+      <mat-error>Title is required</mat-error>
+      }
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Content</mat-label>
-      <textarea matInput rows="10"></textarea>
+      <textarea matInput rows="10" formControlName="content"></textarea>
+      @if (blogForm.controls.content.invalid) {
+      <mat-error>Content is required</mat-error>
+      }
     </mat-form-field>
-    <button mat-flat-button type="submit">Submit</button>
+    <button mat-flat-button type="submit" [disabled]="blogForm.invalid">
+      Submit
+    </button>
   </form>
 </div>

@@ -9,16 +9,7 @@
     @for (blog of blogs(); track $index) {
     <li>
       <a [routerLink]="['/blogs/' + blog.id]">
-        <mat-card class="example-card" appearance="outlined">
-          <mat-card-header>
-            <mat-card-title>{{ blog.title }}</mat-card-title>
-          </mat-card-header>
-          <mat-card-content>
-            <p>
-              {{ blog.content }}
-            </p>
-          </mat-card-content>
-        </mat-card>
+        <app-blog-card [blog]="blog" />
       </a>
     </li>
     }

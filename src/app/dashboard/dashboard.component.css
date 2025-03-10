@@ -17,7 +17,3 @@
 #blogs-dashboard > ul > li {
   flex-basis: 400px;
 }
-
-#blogs-dashboard > ul mat-card-header {
-  padding-block-end: 1rem;
-}
