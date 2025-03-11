@@ -6,22 +6,6 @@
 }
 
 .login-container > mat-card {
-  width: 20rem;
   max-width: calc(100% - 2rem);
   padding: 1rem;
-}
-
-.login-container mat-card-actions {
-  margin-block-start: 1rem;
-  display: grid;
-  row-gap: 1rem;
-}
-
-.login-container #google-login-cta {
-  background-color: orangered;
-  color: #fff;
-}
-.login-container #fb-login-cta {
-  background-color: blue;
-  color: #fff;
 }

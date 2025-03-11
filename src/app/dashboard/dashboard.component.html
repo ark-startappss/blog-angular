@@ -1,10 +1,6 @@
 <main id="blogs-dashboard">
-  <nav>
-    <mat-toolbar>
-      <h1>Dashboard</h1>
-      <a mat-flat-button [routerLink]="['/blogs/create']">Add Blog</a>
-    </mat-toolbar>
-  </nav>
+  <app-navbar />
+  <a mat-flat-button [routerLink]="['/blogs/create']">Add Blog</a>
   <ul>
     @for (blog of blogs(); track $index) {
     <li>

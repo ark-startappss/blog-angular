@@ -4,7 +4,9 @@
       <mat-card-title>Login</mat-card-title>
     </mat-card-header>
     <mat-card-actions>
-      <button mat-button id="google-login-cta">Google Login</button>
+      <button mat-stroked-button id="google-login-cta" (click)="login()">
+        Sign in with Google
+      </button>
     </mat-card-actions>
   </mat-card>
 </main>
