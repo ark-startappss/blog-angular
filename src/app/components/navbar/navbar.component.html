@@ -1,9 +1,11 @@
 <nav>
   <mat-toolbar>
     <h1>Blogs</h1>
+    @if (!!userProfile()?.name) {
     <p class="welcome-text">
-      Welcome <strong>{{ userProfile()?.name }}</strong>
+      Welcome <strong>{{ userProfile().name }}</strong>
     </p>
+    }
     <button mat-stroked-button (click)="logout()">Logout</button>
   </mat-toolbar>
 </nav>

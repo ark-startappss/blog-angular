@@ -21,7 +21,11 @@ export const routes: Routes = [
   {
     path: '',
     canActivate: [checkLoginGuard],
-    component: LayoutComponent,
+    loadComponent: () => {
+      return import('./components/layout/layout.component').then(
+        (m) => m.LayoutComponent
+      );
+    },
     children: [
       {
         path: 'blogs',
