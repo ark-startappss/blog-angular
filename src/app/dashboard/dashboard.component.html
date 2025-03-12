@@ -1,5 +1,4 @@
 <main id="blogs-dashboard">
-  <app-navbar />
   <a mat-flat-button [routerLink]="['/blogs/create']">Add Blog</a>
   <ul>
     @for (blog of blogs(); track $index) {

@@ -5,11 +5,10 @@ import { MatButtonModule } from '@angular/material/button';
 // local imports
 import { mockBlogs } from '../mock/blogs';
 import { BlogCardComponent } from '../components/blog-card/blog-card.component';
-import { NavbarComponent } from '../components/navbar/navbar.component';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [RouterModule, MatButtonModule, BlogCardComponent, NavbarComponent],
+  imports: [RouterModule, MatButtonModule, BlogCardComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css',
 })
